@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B44B03B4-2B94-473A-B46B-A21DF600A373}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Video.Analyzer.Professional.UI</RootNamespace>
+    <AssemblyName>Video.Analyzer.Professional.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Desenvolvimento\dotNet\Projetos\src\Video,Analyzer.Professional\Instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Video Analyzer</ProductName>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_Rattata.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8C98475D7A1CD1058976C38E6768004145E232F4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Video.Analyzer.Professional.UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>..\..\Interop.WMPLib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\João Roberto\source\repos\Video.Analyzer.Professional\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.8.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data.entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entities.6.8.3.0\lib\net45\mysql.data.entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormVideoAnalyzerAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerAnimal.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerComportamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerComportamento.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerComportamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerExtrairExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerExtrairExcel.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerExtrairExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerLogin.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerPlayerWMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerPlayerWMP.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerPlayerWMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerPrincipal.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerSelecionaAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerSelecionaAnimal.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerSelecionaAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerTipoAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerTipoAnimal.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerTipoAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerTipoComportamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVideoAnalyzerTipoComportamento.Designer.cs">
+      <DependentUpon>FormVideoAnalyzerTipoComportamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastrarCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastrarCaixa.Designer.cs">
+      <DependentUpon>FrmCadastrarCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromVideoAnalyzerGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromVideoAnalyzerGrupo.Designer.cs">
+      <DependentUpon>FromVideoAnalyzerGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOC\BootStrapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormVideoAnalyzerAnimal.resx">
+      <DependentUpon>FormVideoAnalyzerAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerComportamento.resx">
+      <DependentUpon>FormVideoAnalyzerComportamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerExtrairExcel.resx">
+      <DependentUpon>FormVideoAnalyzerExtrairExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerLogin.resx">
+      <DependentUpon>FormVideoAnalyzerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerPlayerWMP.resx">
+      <DependentUpon>FormVideoAnalyzerPlayerWMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerPrincipal.resx">
+      <DependentUpon>FormVideoAnalyzerPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerSelecionaAnimal.resx">
+      <DependentUpon>FormVideoAnalyzerSelecionaAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerTipoAnimal.resx">
+      <DependentUpon>FormVideoAnalyzerTipoAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVideoAnalyzerTipoComportamento.resx">
+      <DependentUpon>FormVideoAnalyzerTipoComportamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastrarCaixa.resx">
+      <DependentUpon>FrmCadastrarCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromVideoAnalyzerGrupo.resx">
+      <DependentUpon>FromVideoAnalyzerGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Video.Analyzer.Professional.UI_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Ico\icons8_Rattata.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Ico\tar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Analyzer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\bullet_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\digikam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\excel5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\folder_video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\icons8_Rattata_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\icons8_Rattata_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Fast Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Fast Rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Play Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Remove Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Knob Valid Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\LCE_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\LEC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\mix_volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\rato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\shapes_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\tar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\Type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Imagens\window_fullscreen-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Video.Analyzer.Professional.Infra.Data\Video.Analyzer.Professional.Infra.Data.csproj">
+      <Project>{3ce52ecb-c54a-417c-85cf-6fe78374a413}</Project>
+      <Name>Video.Analyzer.Professional.Infra.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Video.Analyzer.Professional.Application\Video.Analyzer.Professional.Application.csproj">
+      <Project>{18be1528-9fd0-4bf1-abd9-bab61fb831c9}</Project>
+      <Name>Video.Analyzer.Professional.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Video.Analyzer.Professional.CrossCuttin.Extension\Video.Analyzer.Professional.CrossCuttin.Extension.csproj">
+      <Project>{4dee6048-2aea-43d1-99ed-205d33c062f9}</Project>
+      <Name>Video.Analyzer.Professional.CrossCuttin.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Video.Analyzer.Professional.Domain\Video.Analyzer.Professional.Domain.csproj">
+      <Project>{c6de5924-6455-4fd8-b0c6-09f30dda2ffa}</Project>
+      <Name>Video.Analyzer.Professional.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_Rattata.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
