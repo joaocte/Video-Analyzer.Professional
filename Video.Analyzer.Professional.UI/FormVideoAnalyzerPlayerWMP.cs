@@ -40,6 +40,7 @@ namespace Video.Analyzer.Professional.UI
             _animalComportamentoAppService = animalComportamentoAppService;
             _mapper = mapper;
             _container = container;
+            _transacoes = new List<Stopwatch>();
             InitializeComponent();
         }
 
