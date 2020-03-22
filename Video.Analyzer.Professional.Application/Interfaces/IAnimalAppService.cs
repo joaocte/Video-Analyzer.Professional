@@ -12,13 +12,5 @@ namespace Video.Analyzer.Professional.Application.Interfaces
         IEnumerable<AnimalViewModel> GetAll();
 
         IEnumerable<GridAnimalViewModel> GetAll(Guid idUsuario);
-
-        AnimalViewModel GetById(Guid id);
-
-        void Remove(AnimalViewModel obj);
-
-        void Update(AnimalViewModel obj);
-
-        //IEnumerable<AnimalViewModel> Find(Expression<Func<AnimalViewModel, bool>> predicate);
     }
 }

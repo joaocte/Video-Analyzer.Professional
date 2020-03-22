@@ -39,31 +39,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             return _mapper.Map<IEnumerable<GrupoViewModel>>(_grupoService.GetAll());
         }
-
-        public GrupoViewModel GetById(Guid id)
-        {
-            return _mapper.Map<GrupoViewModel>(_grupoService.GetById(id));
-        }
-
-        public void Remove(GrupoViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var grupo = _mapper.Map<Grupo>(obj);
-            _grupoService.Remove(grupo);
-            Commit();
-        }
-
-        public void Update(GrupoViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var grupo = _mapper.Map<Grupo>(obj);
-            _grupoService.Update(grupo);
-            Commit();
-        }
-
-        //public IEnumerable<GrupoViewModel> Find(Expression<Func<Grupo, bool>> predicate)
-        //{
-        //    return _grupoService.Find(predicate).ProjectTo<GrupoViewModel>();
-        //}
     }
 }

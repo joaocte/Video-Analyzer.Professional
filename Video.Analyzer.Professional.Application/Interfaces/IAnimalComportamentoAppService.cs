@@ -12,14 +12,6 @@ namespace Video.Analyzer.Professional.Application.Interfaces
 
         IEnumerable<AnimalComportamentoViewModel> GetAll();
 
-        IEnumerable<RelatorioComportamentoLabirintoEmCruz> GetAll(Guid IdAnimal, Guid idUsuario, DateTime? dataInicio, DateTime? dataFim, bool agrupado);
-
         IEnumerable<RelatorioComportamentoLabirintoEmCruz> GetAll(Guid idCaixa, Guid idUsuario, bool agrupado);
-
-        AnimalComportamentoViewModel GetById(Guid id);
-
-        void Remove(AnimalComportamentoViewModel obj);
-
-        void Update(AnimalComportamentoViewModel obj);
     }
 }

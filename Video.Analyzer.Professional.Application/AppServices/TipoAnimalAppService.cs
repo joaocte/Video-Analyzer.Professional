@@ -39,31 +39,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             return _mapper.Map<IEnumerable<TipoAnimalViewModel>>(_tipoAnimalService.GetAll());
         }
-
-        public TipoAnimalViewModel GetById(Guid id)
-        {
-            return _mapper.Map<TipoAnimalViewModel>(_tipoAnimalService.GetById(id));
-        }
-
-        public void Remove(TipoAnimalViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var tipoAnimal = _mapper.Map<TipoAnimal>(obj);
-            _tipoAnimalService.Remove(tipoAnimal);
-            Commit();
-        }
-
-        public void Update(TipoAnimalViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var tipoAnimal = _mapper.Map<TipoAnimal>(obj);
-            _tipoAnimalService.Update(tipoAnimal);
-            Commit();
-        }
-
-        //public IEnumerable<TipoAnimalViewModel> Find(Expression<Func<TipoAnimalViewModel, bool>> predicate)
-        //{
-        //    return _tipoAnimalService.Find(predicate);
-        //}
     }
 }

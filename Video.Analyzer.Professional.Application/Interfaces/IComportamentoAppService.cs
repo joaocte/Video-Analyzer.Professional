@@ -9,13 +9,5 @@ namespace Video.Analyzer.Professional.Application.Interfaces
         void Add(ComportamentoViewModel obj);
 
         IEnumerable<ComportamentoViewModel> GetAll();
-
-        ComportamentoViewModel GetById(Guid id);
-
-        void Remove(ComportamentoViewModel obj);
-
-        void Update(ComportamentoViewModel obj);
-
-        //IEnumerable<ComportamentoViewModel> Find(Expression<Func<ComportamentoViewModel, bool>> predicate);
     }
 }

@@ -3,8 +3,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using NSubstitute.Exceptions;
 using System;
+using System.Collections.Generic;
 using Video.Analyzer.Professional.Application.AppServices;
 using Video.Analyzer.Professional.Application.Interfaces;
+using Video.Analyzer.Professional.Application.ViewModels;
+using Video.Analyzer.Professional.Application.ViewModels.Animal;
 using Video.Analyzer.Professional.Domain.Entities.Animal;
 using Video.Analyzer.Professional.Domain.Interfaces.Services;
 using Video.Analyzer.Professional.Infra.Data.Interfaces;
@@ -87,6 +90,62 @@ namespace Video.Analyzer.Professional.Tests.Application.AppServices
             _uow.Received().BeginTransaction();
             _mapper.Received().Map<Animal>(animalViewModel);
             _animalService.Received().Add(Arg.Any<Animal>());
+        }
+
+        [TestMethod]
+        public void DeveObterTodosOsAnimaisCadastrados_RetornarAnimais()
+        {
+            var idUsuario = Guid.NewGuid();
+            var usuario = UsuarioFactory.CriarUmUsuarioValido(idUsuario);
+            var usuarioViewModel = UsuarioViewModelFactory.CriarUmUsuarioValido(idUsuario);
+            var listaDeAnimalDomain = new List<Animal>
+            {
+                AnimalFactory.CriarUmAnimal(usuario)
+            };
+            var listaDeAnimalViewModel = new List<AnimalViewModel>
+            {
+                AnimalViewModelFactory.CriarUmAnimal(usuarioViewModel)
+            };
+            _animalService.GetAll().Returns(listaDeAnimalDomain);
+            _mapper.Map<IEnumerable<AnimalViewModel>>(listaDeAnimalDomain).Returns(listaDeAnimalViewModel);
+
+            var retorno = animalAppService.GetAll();
+
+            Assert.IsNotNull(retorno);
+            Assert.AreEqual(listaDeAnimalViewModel, retorno);
+            _animalService.Received().GetAll();
+            _mapper.Received().Map<IEnumerable<AnimalViewModel>>(listaDeAnimalDomain);
+        }
+
+        [TestMethod]
+        public void DeveObterTodosOsAnimaisCadastradosDoUsuarioInformado_RetornarAnimais()
+        {
+            var idUsuario = Guid.NewGuid();
+            var usuario = UsuarioFactory.CriarUmUsuarioValido(idUsuario);
+            var usuarioViewModel = UsuarioViewModelFactory.CriarUmUsuarioValido(idUsuario);
+            var listaDeAnimalDomain = new List<Animal>
+            {
+                AnimalFactory.CriarUmAnimal(usuario)
+            };
+            var listaDeGridAnimalViewModel = new List<GridAnimalViewModel>
+            {
+                GridAnimalViewModelFactory.CriarUmGridAnimalViewModel()
+            };
+            _animalService.GetAll(idUsuario).Returns(listaDeAnimalDomain);
+            _mapper.Map<IEnumerable<GridAnimalViewModel>>(listaDeAnimalDomain).Returns(listaDeGridAnimalViewModel);
+            var retorno = animalAppService.GetAll(idUsuario);
+
+            Assert.IsNotNull(retorno);
+            Assert.AreEqual(listaDeGridAnimalViewModel, retorno);
+            _animalService.Received().GetAll(idUsuario);
+            _mapper.Received().Map<IEnumerable<GridAnimalViewModel>>(listaDeAnimalDomain);
+        }
+
+        [TestMethod]
+        public void DeveRealizarDispose()
+        {
+            animalAppService.Dispose();
+            _animalService.Received().Dispose();
         }
     }
 }

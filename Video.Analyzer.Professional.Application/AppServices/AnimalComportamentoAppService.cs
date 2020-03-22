@@ -51,31 +51,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             return _mapper.Map<IEnumerable<RelatorioComportamentoLabirintoEmCruz>>(_animalComportamentoService.GetAll(idCaixa, idUsuario, agrupado));
         }
-
-        public IEnumerable<RelatorioComportamentoLabirintoEmCruz> GetAll(Guid IdAnimal, Guid idUsuario, DateTime? dataInicio, DateTime? dataFim, bool agrupado)
-        {
-            return _mapper.Map<IEnumerable<RelatorioComportamentoLabirintoEmCruz>>(_animalComportamentoService.GetAll(IdAnimal, idUsuario, dataInicio, dataFim, agrupado));
-        }
-
-        public AnimalComportamentoViewModel GetById(Guid id)
-        {
-            return _mapper.Map<AnimalComportamentoViewModel>(_animalComportamentoService.GetById(id));
-        }
-
-        public void Remove(AnimalComportamentoViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var animalComportamento = _mapper.Map<AnimalComportamento>(obj);
-            _animalComportamentoService.Remove(animalComportamento);
-            Commit();
-        }
-
-        public void Update(AnimalComportamentoViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var animalComportamento = _mapper.Map<AnimalComportamento>(obj);
-            _animalComportamentoService.Update(animalComportamento);
-            Commit();
-        }
     }
 }

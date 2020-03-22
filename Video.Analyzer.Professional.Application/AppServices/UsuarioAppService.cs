@@ -22,14 +22,6 @@ namespace Video.Analyzer.Professional.Application.AppServices
             _mapper = mapper;
         }
 
-        public void Add(UsuarioViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var usuario = _mapper.Map<Usuario>(obj);
-            _usuarioService.Add(usuario);
-            Commit();
-        }
-
         public void Dispose()
         {
             _usuarioService.Dispose();
@@ -39,31 +31,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             return _mapper.Map<IEnumerable<UsuarioViewModel>>(_usuarioService.GetAll());
         }
-
-        public UsuarioViewModel GetById(Guid id)
-        {
-            return _mapper.Map<UsuarioViewModel>(_usuarioService.GetById(id));
-        }
-
-        public void Remove(UsuarioViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var usuario = _mapper.Map<Usuario>(obj);
-            _usuarioService.Remove(usuario);
-            Commit();
-        }
-
-        public void Update(UsuarioViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var usuario = _mapper.Map<Usuario>(obj);
-            _usuarioService.Update(usuario);
-            Commit();
-        }
-
-        //public IEnumerable<UsuarioViewModel> Find(Expression<Func<UsuarioViewModel, bool>> predicate)
-        //{
-        //    return _usuarioService.Find(predicate);
-        //}
     }
 }

@@ -39,31 +39,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             return _mapper.Map<IEnumerable<ComportamentoViewModel>>(_comportamentoService.GetAll());
         }
-
-        public ComportamentoViewModel GetById(Guid id)
-        {
-            return _mapper.Map<ComportamentoViewModel>(_comportamentoService.GetById(id));
-        }
-
-        public void Remove(ComportamentoViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var comportamento = _mapper.Map<Comportamento>(obj);
-            _comportamentoService.Remove(comportamento);
-            Commit();
-        }
-
-        public void Update(ComportamentoViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var comportamento = _mapper.Map<Comportamento>(obj);
-            _comportamentoService.Update(comportamento);
-            Commit();
-        }
-
-        //public IEnumerable<ComportamentoViewModel> Find(Expression<Func<ComportamentoViewModel, bool>> predicate)
-        //{
-        //    return _comportamentoService.Find(predicate);
-        //}
     }
 }

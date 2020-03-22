@@ -80,6 +80,7 @@
     <Compile Include="Factory\ViewModel\AnimalViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\CaixaViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\ComportamentoViewModelFactory.cs" />
+    <Compile Include="Factory\ViewModel\GridAnimalViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\GrupoViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\PerfilViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\TipoAnimalViewModelFactory.cs" />

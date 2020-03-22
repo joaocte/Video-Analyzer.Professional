@@ -39,31 +39,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             return _mapper.Map<IEnumerable<CaixaViewModel>>(_caixaService.GetAll());
         }
-
-        public CaixaViewModel GetById(Guid id)
-        {
-            return _mapper.Map<CaixaViewModel>(_caixaService.GetById(id));
-        }
-
-        public void Remove(CaixaViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var caixa = _mapper.Map<Caixa>(obj);
-            _caixaService.Remove(caixa);
-            Commit();
-        }
-
-        public void Update(CaixaViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var caixa = _mapper.Map<Caixa>(obj);
-            _caixaService.Update(caixa);
-            Commit();
-        }
-
-        //public IEnumerable<CaixaViewModel> Find(Expression<Func<CaixaViewModel, bool>> predicate)
-        //{
-        //    return _caixaService.Find(predicate);
-        //}
     }
 }

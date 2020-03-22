@@ -9,13 +9,5 @@ namespace Video.Analyzer.Professional.Application.Interfaces
         void Add(GrupoViewModel obj);
 
         IEnumerable<GrupoViewModel> GetAll();
-
-        GrupoViewModel GetById(Guid id);
-
-        void Remove(GrupoViewModel obj);
-
-        void Update(GrupoViewModel obj);
-
-        //IEnumerable<GrupoViewModel> Find(Expression<Func<Grupo, bool>> predicate);
     }
 }

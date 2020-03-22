@@ -22,48 +22,9 @@ namespace Video.Analyzer.Professional.Application.AppServices
             _mapper = mapper;
         }
 
-        public void Add(MenuViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var menu = _mapper.Map<Menu>(obj);
-            _menuService.Add(menu);
-            Commit();
-        }
-
         public void Dispose()
         {
             _menuService.Dispose();
         }
-
-        public IEnumerable<MenuViewModel> GetAll()
-        {
-            return _mapper.Map<IEnumerable<MenuViewModel>>(_menuService.GetAll());
-        }
-
-        public MenuViewModel GetById(Guid id)
-        {
-            return _mapper.Map<MenuViewModel>(_menuService.GetById(id));
-        }
-
-        public void Remove(MenuViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var menu = _mapper.Map<Menu>(obj);
-            _menuService.Remove(menu);
-            Commit();
-        }
-
-        public void Update(MenuViewModel obj)
-        {
-            _uow.BeginTransaction();
-            var menu = _mapper.Map<Menu>(obj);
-            _menuService.Update(menu);
-            Commit();
-        }
-
-        //public IEnumerable<MenuViewModel> Find(Expression<Func<MenuViewModel, bool>> predicate)
-        //{
-        //    return _menuService.Find(predicate);
-        //}
     }
 }
