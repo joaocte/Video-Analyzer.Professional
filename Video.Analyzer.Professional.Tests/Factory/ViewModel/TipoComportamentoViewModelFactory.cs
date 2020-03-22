@@ -1,8 +1,6 @@
 ﻿using System;
 using Video.Analyzer.Professional.Application.ViewModels.Comportamento;
 using Video.Analyzer.Professional.Application.ViewModels.Usuario;
-using Video.Analyzer.Professional.Domain.Entities.Comportamento;
-using Video.Analyzer.Professional.Domain.Entities.Usuario;
 
 namespace Video.Analyzer.Professional.Tests.Factory.ViewModel
 {

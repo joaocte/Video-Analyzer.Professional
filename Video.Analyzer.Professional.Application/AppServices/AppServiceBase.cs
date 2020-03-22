@@ -23,18 +23,5 @@ namespace Video.Analyzer.Professional.Application.AppServices
         {
             _uow.SaveChanges();
         }
-
-        protected ValidationAppResult DomainToApplicationResult(ValidationResult result)
-        {
-            var validationAppResult = new ValidationAppResult();
-
-            foreach (var validationError in result.Erros)
-            {
-                validationAppResult.Erros.Add(new ValidationAppError(validationError.Message));
-            }
-            validationAppResult.IsValid = result.IsValid;
-
-            return validationAppResult;
-        }
     }
 }

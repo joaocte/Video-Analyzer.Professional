@@ -1,14 +1,14 @@
 ﻿using System;
-using Video.Analyzer.Professional.Application.ViewModels.Usuario;
+using Video.Analyzer.Professional.Domain.Entities.Usuario;
 
-namespace Video.Analyzer.Professional.Tests.Factory.ViewModel
+namespace Video.Analyzer.Professional.Tests.Factory.Domain
 {
-    public static class UsuarioViewModelFactory
+    public static class UsuarioFactory
     {
-        public static UsuarioViewModel CriarUmUsuarioInvalido(Guid idUsuario)
+        public static Usuario CriarUmUsuarioInvalido(Guid idUsuario)
         {
-            var perfil = PerfilViewModelFactory.CriarUmPerfilValido();
-            return new UsuarioViewModel
+            var perfil = PerfilFactory.CriarUmPerfilValido();
+            return new Usuario
             {
                 Email = "teste@teste.com.br",
                 IdPerfil = perfil.IdPerfil,
@@ -21,10 +21,10 @@ namespace Video.Analyzer.Professional.Tests.Factory.ViewModel
             };
         }
 
-        public static UsuarioViewModel CriarUmUsuarioValido(Guid idUsuario)
+        public static Usuario CriarUmUsuarioValido(Guid idUsuario)
         {
-            var perfil = PerfilViewModelFactory.CriarUmPerfilValido();
-            return new UsuarioViewModel
+            var perfil = PerfilFactory.CriarUmPerfilValido();
+            return new Usuario
             {
                 Email = "teste@teste.com.br",
                 IdPerfil = perfil.IdPerfil,
