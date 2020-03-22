@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using SimpleInjector;
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
 using Video.Analyzer.Professional.Application.Interfaces;

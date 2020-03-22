@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using System;
+﻿using System;
 using System.Windows.Forms;
 using Video.Analyzer.Professional.Application.Interfaces;
 using Video.Analyzer.Professional.Application.ViewModels.Grupo;

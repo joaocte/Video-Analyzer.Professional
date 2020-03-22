@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video.Analyzer.Professional
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Test", "6 - Test", "{171B12B5-8E83-4262-8DDD-5CFE7EC8B68F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video.Analyzer.Professional.Tests", "Video.Analyzer.Professional.Tests\Video.Analyzer.Professional.Tests.csproj", "{515CCDA5-7F46-432F-816D-C507BF1D37F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,14 @@ Global
 		{B44B03B4-2B94-473A-B46B-A21DF600A373}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B44B03B4-2B94-473A-B46B-A21DF600A373}.Release|x86.ActiveCfg = Release|x86
 		{B44B03B4-2B94-473A-B46B-A21DF600A373}.Release|x86.Build.0 = Release|x86
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +93,7 @@ Global
 		{4DEE6048-2AEA-43D1-99ED-205D33C062F9} = {651C2F26-7AC0-4D07-8C50-6A0C209A2C99}
 		{18BE1528-9FD0-4BF1-ABD9-BAB61FB831C9} = {73FC8FEC-1521-451B-851A-EE2DA19DE8E3}
 		{B44B03B4-2B94-473A-B46B-A21DF600A373} = {E7D98F67-4338-471C-9A23-0CB97790BBBC}
+		{515CCDA5-7F46-432F-816D-C507BF1D37F9} = {171B12B5-8E83-4262-8DDD-5CFE7EC8B68F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7834B25C-3A82-4A08-8712-C52383206CE7}

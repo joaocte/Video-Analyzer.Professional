@@ -5,7 +5,6 @@ using Video.Analyzer.Professional.Application.Interfaces;
 using Video.Analyzer.Professional.Application.ViewModels;
 using Video.Analyzer.Professional.Application.ViewModels.Animal;
 using Video.Analyzer.Professional.Application.ViewModels.Caixa;
-using Video.Analyzer.Professional.Application.ViewModels.Grupo;
 using Video.Analyzer.Professional.CrossCuttin.Extension;
 using Video.Analyzer.Professional.UI.Properties;
 
