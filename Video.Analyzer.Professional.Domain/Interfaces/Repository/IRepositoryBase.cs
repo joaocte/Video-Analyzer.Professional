@@ -14,7 +14,5 @@ namespace Video.Analyzer.Professional.Domain.Interfaces.Repository
         void Remove(TEntity obj);
 
         void Update(TEntity obj);
-
-        //IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
     }
 }

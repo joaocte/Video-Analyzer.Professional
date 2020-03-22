@@ -68,7 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\AppServices\AnimalAppServiceTests.cs" />
+    <Compile Include="Application\AppServices\AnimalComportamentoAppServiceTests.cs" />
     <Compile Include="Application\AppServices\AppServiceBaseTests.cs" />
+    <Compile Include="Factory\Domain\AnimalComportamentoFactory.cs" />
     <Compile Include="Factory\Domain\AnimalFactory.cs" />
     <Compile Include="Factory\Domain\CaixaFactory.cs" />
     <Compile Include="Factory\Domain\ComportamentoFactory.cs" />
@@ -77,12 +79,14 @@
     <Compile Include="Factory\Domain\TipoAnimalFactory.cs" />
     <Compile Include="Factory\Domain\TipoComportamentoFactory.cs" />
     <Compile Include="Factory\Domain\UsuarioFactory.cs" />
+    <Compile Include="Factory\ViewModel\AnimalComportamentoViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\AnimalViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\CaixaViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\ComportamentoViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\GridAnimalViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\GrupoViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\PerfilViewModelFactory.cs" />
+    <Compile Include="Factory\ViewModel\RelatorioComportamentoLabirintoEmCruzFactory.cs" />
     <Compile Include="Factory\ViewModel\TipoAnimalViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\TipoComportamentoViewModelFactory.cs" />
     <Compile Include="Factory\ViewModel\UsuarioViewModelFactory.cs" />
